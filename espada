@@ -1,0 +1,29 @@
+package test.Espadasss;
+
+public class Espada {
+
+	public static void main(String[] args) {
+		Sword sw1 = new Sword("Ryuou", "dupla", 0);
+		Sword sw2 = new Sword("Inglesa", "unica", 0);
+		 Muramasa sw3 = new Muramasa("Hibien","dupla", 100);
+		sw1.info();
+		sw2.info();
+		
+		
+		
+		sw3.setCorte(true);
+		sw3.golpear();
+		sw3.golpear();
+		sw3.golpear();
+		sw3.golpear();
+		sw3.golpear();
+		sw3.golpear();
+		sw3.golpear();
+		sw3.golpear();
+		sw3.golpear();
+		sw3.golpear();
+		sw3.fioE(80);
+		sw3.info(); //info deve estar no final
+	}
+
+}
