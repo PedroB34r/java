@@ -1,0 +1,68 @@
+package test.Espadasss;
+
+public class Sword {
+
+	private String nome;
+	private int fio;
+	private String estilo;
+	private boolean corte;
+	
+	public Sword(String nome, String estilo, int fio) { //adiciona tudo que o super for puxar
+		this.nome = nome;
+		this.fio = 0;
+		this.estilo = estilo;
+		this.corte = false;
+	}
+
+		
+
+		public boolean getCorte() {
+		return corte;
+	}
+
+
+
+	public void setCorte(boolean corte) {
+		this.corte = corte;
+	}
+
+
+
+		public String getNome() {
+			return nome;
+		}
+
+		public void setNome(String nome) {
+			this.nome = nome;
+		}
+
+		public int getFio() {
+			return fio;
+		}
+
+		public void setFio(int fio) {
+			this.fio = fio;
+		}
+
+		public String getEstilo() {
+			return estilo;
+		}
+
+		public void setEstilo(String estilo) {
+			this.estilo = estilo;
+		}
+	
+		public void fioE(int dano) {
+			this.fio -= dano;
+			if(this.fio <= 0) {
+				this.fio=0;
+			}
+		}
+		
+		public void info() {
+			System.out.printf("Nome da espada...........%s%n", this.nome);
+			System.out.printf("Estado do fio............%s%n", this.fio);
+			System.out.printf("Nome do Estilo/Empunhadura..%s%n", this.estilo);
+			System.out.printf("Houve corte...........%s%n", this.corte ? "sim" : "não");
+			}
+}
