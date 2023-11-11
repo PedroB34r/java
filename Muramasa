@@ -1,0 +1,42 @@
+package test.Espadasss;
+
+public class Muramasa extends Sword{
+	private final int MAX_CORTE = 100;
+	private final int MIN_CORTE = 0;
+	private int qtdfio;
+	
+	
+	public Muramasa(String nome, String estilo, int fio) {
+		super(nome, estilo, fio);
+		super.setCorte(true);
+		super.setFio(fio);
+		this.qtdfio = 100;
+	}
+	public void setQtdfio(int qtdfio){
+		this.qtdfio += qtdfio;
+		if(this.qtdfio > MAX_CORTE) {
+			this.qtdfio = MAX_CORTE;
+		}if (this.qtdfio < MIN_CORTE) {
+				this.qtdfio = MIN_CORTE;
+		}
+	}
+	
+	public int getQtdfio() {
+		return this.qtdfio;
+	}
+	public void golpear() {
+		if(this.qtdfio > MIN_CORTE){
+		setQtdfio(-5);
+	}else
+	{System.out.println("Afie a espada");}
+		
+	}
+	public void info() {
+		super.info();
+		System.out.printf("Estado do fio...........%d%n",this.qtdfio);
+	}
+
+
+	
+	
+}
